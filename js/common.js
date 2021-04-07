@@ -18,7 +18,7 @@ var stickyHeaders = (function() {
 
 		if (typeof stickies === "object" && stickies instanceof jQuery && stickies.length > 0) {
 
-			$stickies = stickies.each(function (i, item) {
+			$stickies = stickies.each(function() {
 
 				var $thisSticky = $(this);
 
@@ -47,6 +47,7 @@ var stickyHeaders = (function() {
 
 			});
 
+
 			$window.off("scroll.stickies").on("scroll.stickies", function () {
 				_whenScrolling();
 			});
@@ -56,7 +57,7 @@ var stickyHeaders = (function() {
 	}
 
 	var _whenScrolling = function() {
-		$stickies.each(function() {
+		$stickies.each(function(i) {
 
 			var $thisSticky = $(this),
 					$stickyPosition = $thisSticky.data('originalPosition');
@@ -65,6 +66,12 @@ var stickyHeaders = (function() {
 			// console.log($window.scrollTop());
 
 			if (($stickyPosition - (tPanelHeight - 1)) <= $window.scrollTop()) {
+
+				// console.log($stickies);
+				// $stickies.each(function (i) {
+				// 	var $nextSticky = $stickies.eq(i + 1);
+				// 	console.log($nextSticky);
+				// })
 
 				$thisSticky.addClass("fixed");
 

@@ -76,6 +76,10 @@ button {
 .fw-700 {
   font-weight: 700; }
 
+.middle-description {
+  font-size: 18px;
+  line-height: 19px; }
+
 .standard-description {
   font-size: 20px;
   line-height: 24px; }
@@ -100,7 +104,9 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  transition: background .15s linear; }
+  align-items: center;
+  transition: background .15s linear;
+  min-height: 100vh; }
   #main-container.black-theme {
     transition: background .15s linear;
     background: #eeeeef; }
@@ -115,9 +121,17 @@ button {
       background-color: transparent; }
       #main-container.black-theme .hero-content .hero-form .form-block-wrapper .followWrap .followMeBar2.fixed {
         background-color: #eeeeef; }
+    #main-container.black-theme .hero-content .hero-form .form-block .form-check-input[type=checkbox] + label.form-check-label {
+      border: 1px solid #282828; }
+    #main-container.black-theme .hero-content .hero-form .form-block .form-check-input[type=checkbox]:checked + label.form-check-label {
+      border: 1px solid #282828; }
+      #main-container.black-theme .hero-content .hero-form .form-block .form-check-input[type=checkbox]:checked + label.form-check-label:after {
+        background-color: #282828; }
     #main-container.black-theme .width-wrapper .control-width.tasks-panel {
       transition: all .15s linear;
       background-color: #eeeeef; }
+  #main-container .width-wrapper .control-width .hero-title {
+    margin-bottom: 25px; }
   #main-container .width-wrapper .control-width .nav-tabs {
     margin-top: 50px; }
 
@@ -125,7 +139,8 @@ button {
   position: relative;
   width: 100%;
   max-width: 350px;
-  z-index: 1000; }
+  z-index: 1000;
+  align-self: flex-start; }
 
 #side-bar {
   position: fixed;
@@ -200,6 +215,14 @@ button {
     .hero-content .width-wrapper .control-width {
       width: 100%;
       max-width: 380px; }
+      .hero-content .width-wrapper .control-width .signUp {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 25px; }
+        .hero-content .width-wrapper .control-width .signUp a {
+          font-weight: 600;
+          color: #949494; }
       .hero-content .width-wrapper .control-width.wider {
         max-width: 600px; }
       .hero-content .width-wrapper .control-width.checkboxes-wrapper {
@@ -245,7 +268,7 @@ button {
         background-color: #fff;
         justify-content: center;
         z-index: 150;
-        box-shadow: 0px 7px 8px 0px #6b6b6b57; }
+        border-bottom: 1px solid #6b6b6b57; }
         .hero-content .hero-form .form-block-wrapper .followMeBar.fixed.absolute,
         .hero-content .hero-form .form-block-wrapper .followMeBar2.fixed.absolute {
           position: absolute;
@@ -562,14 +585,30 @@ button {
   .nav-tabs .nav-item:last-of-type .nav-link {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px; }
+  .hero-content .width-wrapper .control-width .signUp {
+    justify-content: center; }
   .hero-content .width-wrapper .control-width.checkboxes-wrapper {
     padding-top: 0; }
-  .hero-content .hero-form .form-block-wrapper .followMeBar.fixed,
-  .hero-content .hero-form .form-block-wrapper .followMeBar2.fixed {
-    top: 92px;
-    width: 100%; }
-  .hero-content .hero-form .form-block-wrapper .first-line:last-of-type {
-    margin-bottom: 80px; } }
+  .hero-content .hero-form {
+    margin-bottom: 100px; }
+    .hero-content .hero-form .button-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+    .hero-content .hero-form .button {
+      margin-top: 0px;
+      border-radius: 50px;
+      width: 80px !important;
+      height: 80px !important; }
+    .hero-content .hero-form .standard-form-input,
+    .hero-content .hero-form .standard-form-textarea {
+      border-radius: 4px; }
+    .hero-content .hero-form .form-block-wrapper .followMeBar.fixed,
+    .hero-content .hero-form .form-block-wrapper .followMeBar2.fixed {
+      top: 92px;
+      width: 100%; }
+    .hero-content .hero-form .form-block-wrapper .first-line:last-of-type {
+      margin-bottom: 80px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

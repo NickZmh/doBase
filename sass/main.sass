@@ -49,7 +49,9 @@ body textarea:required:valid
 	display: flex
 	flex-direction: row
 	justify-content: flex-end
+	align-items: center
 	transition: background .15s linear
+	min-height: 100vh
 	&.black-theme
 		transition: background .15s linear
 		background: #eeeeef
@@ -70,6 +72,13 @@ body textarea:required:valid
 						.followMeBar2
 							&.fixed
 								background-color: #eeeeef
+				.form-block
+					.form-check-input[type=checkbox] + label.form-check-label
+						border: 1px solid $black-color
+					.form-check-input[type=checkbox]:checked + label.form-check-label
+						border: 1px solid $black-color
+						&:after
+							background-color: $black-color
 		.width-wrapper
 			.control-width
 				&.tasks-panel
@@ -83,6 +92,8 @@ body textarea:required:valid
 		//		border: 1px solid $black-color
 	.width-wrapper
 		.control-width
+			.hero-title
+				margin-bottom: 25px
 			.nav-tabs
 				margin-top: 50px
 .side-bar-wrapper
@@ -90,6 +101,7 @@ body textarea:required:valid
 	width: 100%
 	max-width: 350px
 	z-index: 1000
+	align-self: flex-start
 #side-bar
 	position: fixed
 	display: flex
@@ -156,6 +168,7 @@ body textarea:required:valid
 				background-color: $gray-black-color
 				color: $white-color
 
+
 .hero-content
 	width: 100%
 	.width-wrapper
@@ -166,6 +179,14 @@ body textarea:required:valid
 		.control-width
 			width: 100%
 			max-width: 380px
+			.signUp
+				display: flex
+				flex-direction: row
+				justify-content: flex-start
+				margin-top: 25px
+				a
+					font-weight: 600
+					color: $gray-black-color
 			&.wider
 				max-width: 600px
 			&.checkboxes-wrapper
@@ -211,7 +232,7 @@ body textarea:required:valid
 					background-color: $white-color
 					justify-content: center
 					z-index: 150
-					box-shadow: 0px 7px 8px 0px #6b6b6b57
+					border-bottom: 1px solid #6b6b6b57
 					&.absolute
 						position: absolute
 						width: 100%
