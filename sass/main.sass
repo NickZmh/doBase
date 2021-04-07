@@ -52,29 +52,57 @@ body textarea:required:valid
 	transition: background .15s linear
 	&.black-theme
 		transition: background .15s linear
-		background: linear-gradient(287.56deg, rgba(165, 172, 180, 0.25) 0%, rgba(184, 192, 201, 0.140268) 33.65%, rgba(212, 216, 222, 0.0856817) 59.47%, rgba(231, 234, 237, 0.0468701) 77.83%, rgba(255, 255, 255, 0) 100%), #F2F2F2
+		background: #eeeeef
+		#side-bar
+			transition: background .15s linear
+			background: #eeeeef
 		.button
 			&.gray-button
 				background-color: $black-color
 		.nav-tabs .nav-item .nav-link
 			&.active
 				background-color: $black-color
+		.hero-content
+			.hero-form
+				.form-block-wrapper
+					.followWrap
+						background-color: transparent
+						.followMeBar2
+							&.fixed
+								background-color: #eeeeef
+		.width-wrapper
+			.control-width
+				&.tasks-panel
+					transition: all .15s linear
+					background-color: #eeeeef
+
+
 		//.hero-content .hero-form
 		//	.standard-form-input,
 		//	.standard-form-textarea
 		//		border: 1px solid $black-color
-
+	.width-wrapper
+		.control-width
+			.nav-tabs
+				margin-top: 50px
+.side-bar-wrapper
+	position: relative
+	width: 100%
+	max-width: 350px
+	z-index: 1000
 #side-bar
 	position: fixed
 	display: flex
 	flex-direction: column
 	justify-content: space-between
 	padding: 70px 40px 50px
-	width: 25%
+	width: 100%
 	left: 0
-	//min-width: 350px
+	max-width: 350px
 	height: 100vh
 	border-right: 1px solid rgba(47, 53, 66, 0.2)
+	background-color: $white-color
+	transition: background .15s linear
 	.hero-title
 		display: block
 		text-align: center
@@ -129,7 +157,7 @@ body textarea:required:valid
 				color: $white-color
 
 .hero-content
-	width: 75%
+	width: 100%
 	.width-wrapper
 		display: flex
 		flex-direction: column
@@ -141,7 +169,6 @@ body textarea:required:valid
 			&.wider
 				max-width: 600px
 			&.checkboxes-wrapper
-				padding-top: 120px
 				display: flex
 				flex-direction: column
 				align-items: flex-end
@@ -166,12 +193,45 @@ body textarea:required:valid
 			flex-direction: column
 			justify-content: center
 			align-items: flex-end
+			.followWrap
+				position: relative
+				display: flex
+				width: 100%
+				background-color: $white-color
+			.followMeBar,
+			.followMeBar2
+				padding: 10px 0 10px 0
+				&.fixed
+					position: fixed
+					padding-left: 15px
+					padding-right: 15px
+					top: 0
+					width: calc(100% - 350px)
+					right: 0
+					background-color: $white-color
+					justify-content: center
+					z-index: 150
+					box-shadow: 0px 7px 8px 0px #6b6b6b57
+					&.absolute
+						position: absolute
+						width: 100%
+						top: 0!important
+			.followMeBar2
+				&.fixed
+					z-index: 200
+			.form-block-head
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				width: 100%
+				max-width: 600px
 			&.first-line
 				margin-bottom: 35px
 				>.form-block
 					margin-bottom: 20px
 			&.second-line
 				max-width: 500px
+				margin-top: 5px
 				margin-bottom: 10px
 				.form-block
 					margin-bottom: 15px
@@ -191,7 +251,7 @@ body textarea:required:valid
 					&.hero
 						font-weight: 400
 						font-size: 18px
-						line-height: 20px
+						line-height: 26px
 				.date
 					font-weight: 300
 					font-size: 12px
@@ -205,6 +265,9 @@ body textarea:required:valid
 			align-items: center
 			align-content: center
 			margin-bottom: 10px
+			&.line-through
+				.title
+					text-decoration: line-through
 			.title
 				&.hero
 					font-size: 40px
@@ -301,6 +364,40 @@ body textarea:required:valid
 			margin-bottom: 25px
 		.button
 			margin-top: 40px
+
+.footer-menu
+	position: fixed
+	bottom: 0
+	width: 100%
+	&.black-theme
+		ul
+			transition: all .15s linear
+			background-color: #eeeeef
+	ul
+		display: flex
+		flex-direction: row
+		border-top: 1px solid rgba(47, 53, 66, 0.2)
+		background-color: $white-color
+		transition: all .15s linear
+		li
+			width: 100%
+			max-width: 25%
+			border-right: 1px solid rgba(47, 53, 66, 0.2)
+			&:last-of-type
+				border-right: none
+			a
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				padding: 15px
+				.icon
+					font-size: 18px
+					margin-bottom: 5px
+				.text
+					font-weight: 600
+					font-size: 18px
+					line-height: 19px
 
 .hidden
 	display: none

@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="libs/animate/animate.css">
 
 
-	<link rel="stylesheet" href="css/main.min.css">
+<!--	<link rel="stylesheet" href="css/main.min.css">-->
 	<link rel="stylesheet" href="css/main.css">
 
 
@@ -39,43 +39,63 @@
 
 <body>
 	<div id="main-container" class="">
-		<div id="side-bar" class="side-bar-block">
-			<div class="top-block">
-				<a href="#" class="hero-title black-color fw-700">doBase</a>
-				<ul class="nav nav-tabs" id="side-bar-tabs" role="tablist">
-					<li class="nav-item" role="presentation">
-						<a class="nav-link standard-description button fw-500 high active" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="work" aria-selected="true">Work</a>
-					</li>
-					<li class="nav-item" role="presentation">
-						<a class="nav-link standard-description button fw-500 high" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal" aria-selected="false">Personal</a>
-					</li>
-				</ul>
-				<ul class="nav-menu">
-					<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-user"></i></span>Me</a></li>
-					<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-users"></i></span>Others</a></li>
-					<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Date</a></li>
-				</ul>
-				<a href="#" class="button gray-button standard-description fw-500 high"><span class="icon mr-2"><i class="fas fa-plus"></i></span> Add</a>
-			</div>
+		<div class="side-bar-wrapper">
+			<div id="side-bar" class="side-bar-block">
+				<div class="top-block">
+					<a href="#" class="hero-title black-color fw-700">doBase</a>
+					<ul class="nav nav-tabs" id="side-bar-tabs" role="tablist">
+						<li class="nav-item" role="presentation">
+							<a class="nav-link standard-description button fw-500 high active" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="work" aria-selected="true">Work</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a class="nav-link standard-description button fw-500 high" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal" aria-selected="false">Personal</a>
+						</li>
+					</ul>
+					<ul class="nav-menu">
+						<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-user"></i></span>Me</a></li>
+						<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-users"></i></span>Others</a></li>
+						<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Date</a></li>
+					</ul>
+					<a href="#" class="button gray-button standard-description fw-500 high"><span class="icon mr-2"><i class="fas fa-plus"></i></span> Add</a>
+				</div>
 
-			<div class="bottom-block">
-				<a href="#" class="medium-description fw-700">Log Out</a>
+				<div class="bottom-block">
+					<a href="#" class="medium-description fw-700">Log Out</a>
+				</div>
 			</div>
 		</div>
 		<div class="hero-content">
-			<div class="container">
+			<div class="container-fluid container-md">
 				<div class="row">
+					<div class="col-12">
+						<div class="width-wrapper">
+							<div class="control-width tasks-panel">
+								<ul class="nav nav-tabs d-none t-panel" id="hero-content-tabs" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="nav-link standard-description button fw-500 high active" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="work" aria-selected="true">Work</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link standard-description button fw-500 high" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal" aria-selected="false">Personal</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 					<div class="col-12">
 						<div class="tab-content" id="">
 							<div class="tab-pane fade show active" id="work" role="tabpanel" aria-labelledby="work-tab">
 								<div class="width-wrapper">
 									<form action="" class="hero-form control-width wider checkboxes-wrapper">
 										<div class="form-block-wrapper first-line">
-											<div class="form-block">
-												<h4 class="title hero">Project Name</h4>
-												<div class="checkbox-block">
-													<input class="form-check-input hero first-input" type="checkbox" id="inlineCheckbox101" value="option1">
-													<label class="form-check-label" for="inlineCheckbox101"></label>
+											<div class="followWrap">
+												<div class="form-block followMeBar">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 1</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero first-input" type="checkbox" id="inlineCheckbox101" value="option1">
+															<label class="form-check-label" for="inlineCheckbox101"></label>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="form-block-wrapper second-line">
@@ -150,11 +170,15 @@
 											</div>
 										</div>
 										<div class="form-block-wrapper first-line">
-											<div class="form-block">
-												<h4 class="title hero">Project Name</h4>
-												<div class="checkbox-block">
-													<input class="form-check-input hero" type="checkbox" id="inlineCheckbox102" value="option1">
-													<label class="form-check-label" for="inlineCheckbox102"></label>
+											<div class="followWrap">
+												<div class="form-block followMeBar">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 2</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero" type="checkbox" id="inlineCheckbox102" value="option1">
+															<label class="form-check-label" for="inlineCheckbox102"></label>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="form-block-wrapper second-line">
@@ -229,11 +253,15 @@
 											</div>
 										</div>
 										<div class="form-block-wrapper first-line">
-											<div class="form-block">
-												<h4 class="title hero">Project Name</h4>
-												<div class="checkbox-block">
-													<input class="form-check-input hero" type="checkbox" id="inlineCheckbox35" value="option1">
-													<label class="form-check-label" for="inlineCheckbox35"></label>
+											<div class="followWrap">
+												<div class="form-block followMeBar">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 3</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero" type="checkbox" id="inlineCheckbox35" value="option1">
+															<label class="form-check-label" for="inlineCheckbox35"></label>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="form-block-wrapper second-line">
@@ -307,16 +335,461 @@
 												</div>
 											</div>
 										</div>
+										<div class="form-block-wrapper first-line">
+											<div class="followWrap">
+												<div class="form-block followMeBar">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 4</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero" type="checkbox" id="inlineCheckbox45" value="option1">
+															<label class="form-check-label" for="inlineCheckbox45"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox46" value="option1">
+														<label class="form-check-label" for="inlineCheckbox46"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox47" value="option1">
+															<label class="form-check-label" for="inlineCheckbox47"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox48" value="option1">
+															<label class="form-check-label" for="inlineCheckbox48"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox49" value="option1">
+															<label class="form-check-label" for="inlineCheckbox49"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox50" value="option1">
+														<label class="form-check-label" for="inlineCheckbox50"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox51" value="option1">
+															<label class="form-check-label" for="inlineCheckbox51"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox52" value="option1">
+															<label class="form-check-label" for="inlineCheckbox52"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox53" value="option1">
+															<label class="form-check-label" for="inlineCheckbox53"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</form>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="personal-tab">
 								<div class="width-wrapper">
-									<form action="" class="hero-form">
-										<div class="form-block">
-											<h4 class="title"></h4>
-											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-											<label class="form-check-label" for="inlineCheckbox1">1</label>
+									<form action="" class="hero-form control-width wider checkboxes-wrapper">
+										<div class="form-block-wrapper first-line">
+											<div class="followWrap">
+												<div class="form-block followMeBar2">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 1</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero first-input" type="checkbox" id="inlineCheckbox201" value="option1">
+															<label class="form-check-label" for="inlineCheckbox201"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox202" value="option1">
+														<label class="form-check-label" for="inlineCheckbox202"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox203" value="option1">
+															<label class="form-check-label" for="inlineCheckbox203"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox204" value="option1">
+															<label class="form-check-label" for="inlineCheckbox204"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox205" value="option1">
+															<label class="form-check-label" for="inlineCheckbox205"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox206" value="option1">
+														<label class="form-check-label" for="inlineCheckbox206"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox207" value="option1">
+															<label class="form-check-label" for="inlineCheckbox207"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox208" value="option1">
+															<label class="form-check-label" for="inlineCheckbox208"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox209" value="option1">
+															<label class="form-check-label" for="inlineCheckbox209"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox206" value="option1">
+														<label class="form-check-label" for="inlineCheckbox206"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox207" value="option1">
+															<label class="form-check-label" for="inlineCheckbox207"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox208" value="option1">
+															<label class="form-check-label" for="inlineCheckbox208"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox209" value="option1">
+															<label class="form-check-label" for="inlineCheckbox209"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-block-wrapper first-line">
+											<div class="followWrap">
+												<div class="form-block followMeBar2">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 2</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero" type="checkbox" id="inlineCheckbox210" value="option1">
+															<label class="form-check-label" for="inlineCheckbox210"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox211" value="option1">
+														<label class="form-check-label" for="inlineCheckbox211"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur cumque distinctio dolore in iste iusto modi nisi nostrum, officia ratione reiciendis saepe sequi, sint sunt veniam vitae! Quo, rerum?</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox212" value="option1">
+															<label class="form-check-label" for="inlineCheckbox212"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox213" value="option1">
+															<label class="form-check-label" for="inlineCheckbox213"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox214" value="option1">
+															<label class="form-check-label" for="inlineCheckbox214"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox251" value="option1">
+														<label class="form-check-label" for="inlineCheckbox251"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox252" value="option1">
+															<label class="form-check-label" for="inlineCheckbox252"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox253" value="option1">
+															<label class="form-check-label" for="inlineCheckbox253"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox254" value="option1">
+															<label class="form-check-label" for="inlineCheckbox254"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-block-wrapper first-line">
+											<div class="followWrap">
+												<div class="form-block followMeBar2">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 3</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero" type="checkbox" id="inlineCheckbox215" value="option1">
+															<label class="form-check-label" for="inlineCheckbox215"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox216" value="option1">
+														<label class="form-check-label" for="inlineCheckbox216"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox217" value="option1">
+															<label class="form-check-label" for="inlineCheckbox217"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox218" value="option1">
+															<label class="form-check-label" for="inlineCheckbox218"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox219" value="option1">
+															<label class="form-check-label" for="inlineCheckbox219"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox220" value="option1">
+														<label class="form-check-label" for="inlineCheckbox220"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox221" value="option1">
+															<label class="form-check-label" for="inlineCheckbox221"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox222" value="option1">
+															<label class="form-check-label" for="inlineCheckbox222"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox223" value="option1">
+															<label class="form-check-label" for="inlineCheckbox223"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-block-wrapper first-line">
+											<div class="followWrap">
+												<div class="form-block followMeBar2">
+													<div class="form-block-head">
+														<h4 class="title hero">Project Name 4</h4>
+														<div class="checkbox-block">
+															<input class="form-check-input hero" type="checkbox" id="inlineCheckbox224" value="option1">
+															<label class="form-check-label" for="inlineCheckbox224"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox225" value="option1">
+														<label class="form-check-label" for="inlineCheckbox225"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox226" value="option1">
+															<label class="form-check-label" for="inlineCheckbox226"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox227" value="option1">
+															<label class="form-check-label" for="inlineCheckbox227"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox228" value="option1">
+															<label class="form-check-label" for="inlineCheckbox228"></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-block-wrapper second-line">
+												<div class="form-block">
+													<h4 class="title hero">Goal Name</h4>
+													<div class="checkbox-block">
+														<input class="form-check-input hero" type="checkbox" id="inlineCheckbox229" value="option1">
+														<label class="form-check-label" for="inlineCheckbox229"></label>
+													</div>
+												</div>
+												<div class="form-block-wrapper third-line">
+													<div class="form-block">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox230" value="option1">
+															<label class="form-check-label" for="inlineCheckbox230"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox231" value="option1">
+															<label class="form-check-label" for="inlineCheckbox231"></label>
+														</div>
+													</div>
+													<div class="form-block third-line">
+														<h4 class="title hero">Task can be with a lot of words</h4>
+														<div class="checkbox-block">
+															<span class="date">03/04/21</span>
+															<input class="form-check-input" type="checkbox" id="inlineCheckbox232" value="option1">
+															<label class="form-check-label" for="inlineCheckbox232"></label>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</form>
 								</div>
@@ -326,7 +799,30 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
+	<div class="footer-menu">
+		<ul>
+			<li><a href="#">
+				<span class="icon"><i class="fas fa-plus" aria-hidden="true"></i></span>
+				<span class="text">Add</span></a></li>
+			<li><a href="#">
+				<span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+				<span class="text">Me</span>
+			</a></li>
+			<li><a href="#">
+				<span class="icon">
+					<i class="fas fa-users" aria-hidden="true"></i>
+				</span>
+				<span class="text">Other</span>
+			</a></li>
+			<li><a href="#">
+				<span class="icon">
+					<i class="fas fa-calendar-alt" aria-hidden="true"></i>
+				</span>
+				<span class="text">Date</span>
+			</a></li>
+		</ul>
 	</div>
 
 

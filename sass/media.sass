@@ -7,11 +7,109 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-  /**/
+
+  .standard-description
+    font-size: 18px
+    line-height: 22px
+  .medium-description
+    font-size: 22px
+    line-height: 25px
+
+  .button
+    &.high
+      height: 46px
+
+  .side-bar-wrapper
+    max-width: 280px
+  #side-bar
+    padding: 50px 20px 50px
+    max-width: 280px
+    .hero-title
+      margin-bottom: 35px
+  .hero-title
+    font-size: 54px
+    line-height: 60px
+  .nav-tabs .nav-item .nav-link
+    height: 42px
+
+
+  .hero-content
+    .hero-form
+      .form-block-wrapper
+        &.first-line
+          .form-block-head
+            .title
+              &.hero
+                font-size: 38px
+                line-height: 42px
+        &.second-line
+          max-width: 530px
+          >.form-block
+            padding-left: 30px
+            .title
+              &.hero
+                font-size: 30px
+                line-height: 34px
+        &.third-line
+          max-width: 500px
+          >.form-block
+            padding-left: 60px
+            .title
+              &.hero
+                font-size: 17px
+          .date
+            font-size: 11px
+            line-height: 14px
+        .followMeBar,
+        .followMeBar2
+          &.fixed
+            width: calc(100% - 280px)
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+
+  .hero-title
+    font-size: 48px
+    line-height: 56px
+
+  .side-bar-wrapper
+    max-width: 250px
+  #side-bar
+    padding: 50px 15px 50px
+    max-width: 250px
+  .hero-content
+    //.width-wrapper .control-width
+    //  &.checkboxes-wrapper
+    //    padding-top: 100px
+    .hero-form
+      .form-block-wrapper
+        &.first-line
+          .form-block-head
+            .title
+              &.hero
+                font-size: 35px
+                line-height: 40px
+        &.second-line
+          max-width: 515px
+          >.form-block
+            padding-left: 15px
+            .title
+              &.hero
+                font-size: 28px
+                line-height: 32px
+        &.third-line
+          max-width: 480px
+          >.form-block
+            padding-left: 40px
+            .title
+              &.hero
+                font-size: 16px
+        .followMeBar,
+        .followMeBar2
+          &.fixed
+            width: calc(100% - 250px)
 
   /*Disable Animation on Mobile Devices*/
   .animated
@@ -34,10 +132,107 @@
     -ms-animation: none !important
     animation: none !important
 
+@media only screen and (max-width : 680px)
+  .side-bar-wrapper
+    display: none
+
+  #main-container
+    &.black-theme
+      .width-wrapper
+        .control-width
+          &.tasks-panel
+            .nav-tabs
+              .nav-item
+                &:first-of-type
+                  .nav-link
+                    background-color: #eeeeef
+    .width-wrapper
+      .control-width
+        &.tasks-panel
+          position: fixed
+          z-index: 450
+          top: 0
+          padding: 30px 15px 20px
+          background-color: $white-color
+          transition: all .15s linear
+          width: 100%
+          max-width: 100%
+          display: flex
+          flex-direction: row
+          justify-content: center
+          .nav-tabs
+            max-width: 300px
+            width: 100%
+            margin: 0
+            left: 0
+            background-color: $white-color
+            z-index: 300
+            border: none
+            display: flex!important
+
+  .nav-tabs
+    .nav-item
+      &:first-of-type
+        .nav-link
+          border-top-left-radius: 4px
+          border-bottom-left-radius: 4px
+      &:last-of-type
+        .nav-link
+          border-top-right-radius: 4px
+          border-bottom-right-radius: 4px
+
+
+  .hero-content
+    .width-wrapper .control-width
+      &.checkboxes-wrapper
+        padding-top: 0
+    .hero-form
+      .form-block-wrapper
+        .followMeBar,
+        .followMeBar2
+          &.fixed
+            top: 92px
+            width: 100%
+        .first-line
+          &:last-of-type
+            margin-bottom: 80px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  /**/
+  .hero-content
+    //.width-wrapper .control-width
+    //  &.checkboxes-wrapper
+    //    padding-top: 100px
+    .hero-form
+      .form-block-wrapper
+        &.first-line
+          .form-block
+            &.followMeBar
+              margin-bottom: 5px
+          .form-block-head
+            .title
+              &.hero
+                font-size: 30px
+                line-height: 40px
+        &.second-line
+          >.form-block
+            .title
+              &.hero
+                font-size: 26px
+                line-height: 32px
+        &.third-line
+          >.form-block
+            padding-left: 30px
+            margin-bottom: 8px
+            .title
+              &.hero
+                font-size: 15px
+
+  .footer-menu ul li
+    a
+      padding: 10px
+      .icon
+        margin-bottom: 2px
 
 
 /* Custom, iPhone Retina */
@@ -58,13 +253,23 @@
 
 
 /* Small Devices, Tablets */
+@media only screen and (min-width : 680px)
+  .hero-content
+    .width-wrapper .control-width
+      &.checkboxes-wrapper
+        padding-top: 100px!important
+  .footer-menu
+    display: none
 @media only screen and (min-width : 768px)
   /**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-  /**/
+  .hero-content
+    .width-wrapper .control-width
+      &.checkboxes-wrapper
+        padding-top: 120px!important
 
 
 /* Large Devices, Wide Screens */
