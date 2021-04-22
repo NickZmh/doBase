@@ -2,13 +2,13 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
 <head>
 
 	<meta charset="utf-8">
 
-	<title>Заголовок</title>
+	<title>doBase | Tasks</title>
 	<meta name="description" content="">
 
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -37,10 +37,10 @@
 
 </head>
 
-<body>
+<body class="">
 	<div id="main-container" class="">
 		<div class="side-bar-wrapper">
-			<div id="side-bar" class="side-bar-block">
+			<div id="side-bar" class="side-bar-block with-indent">
 				<div class="top-block">
 					<a href="index.html" class="hero-title black-color fw-700">doBase</a>
 					<ul class="nav nav-tabs" id="side-bar-tabs" role="tablist">
@@ -51,15 +51,14 @@
 							<a class="nav-link standard-description button fw-500 high" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal" aria-selected="false">Personal</a>
 						</li>
 					</ul>
-					<ul class="nav-menu">
-						<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-user"></i></span>Me</a></li>
-						<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-users"></i></span>Others</a></li>
-						<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Date</a></li>
-					</ul>
-					<a href="#" class="button gray-button standard-description fw-500 high"><span class="icon mr-2"><i class="fas fa-plus"></i></span> Add</a>
 				</div>
-
-				<div class="bottom-block">
+				<ul class="nav-menu">
+					<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-user"></i></span>Me</a></li>
+					<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-users"></i></span>Others</a></li>
+					<li><a class="standard-description" href="#"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Date</a></li>
+				</ul>
+				<div class="bottom-block text-center">
+					<a href="#" class="button black-button standard-description fw-500 high"><span class="icon mr-2"><i class="fas fa-plus"></i></span> Add</a>
 					<a href="#" class="medium-description fw-700">Log Out</a>
 				</div>
 			</div>
@@ -803,25 +802,34 @@
 
 	<div class="footer-menu">
 		<ul>
-			<li><a href="#">
-				<span class="icon"><i class="fas fa-plus" aria-hidden="true"></i></span>
-				<span class="text">Add</span></a></li>
-			<li><a href="#">
-				<span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
-				<span class="text">Me</span>
-			</a></li>
-			<li><a href="#">
-				<span class="icon">
-					<i class="fas fa-users" aria-hidden="true"></i>
-				</span>
-				<span class="text">Other</span>
-			</a></li>
-			<li><a href="#">
-				<span class="icon">
-					<i class="fas fa-calendar-alt" aria-hidden="true"></i>
-				</span>
-				<span class="text">Date</span>
-			</a></li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+					<span class="text">Me</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon">
+						<i class="fas fa-users" aria-hidden="true"></i>
+					</span>
+					<span class="text">Other</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon">
+						<i class="fas fa-calendar-alt" aria-hidden="true"></i>
+					</span>
+					<span class="text">Date</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fas fa-plus" aria-hidden="true"></i></span>
+					<span class="text">Add</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 

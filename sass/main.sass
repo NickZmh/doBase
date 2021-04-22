@@ -25,6 +25,9 @@ html.js .loader
 		top: 50%
 		position: absolute
 
+html
+	height: 100%
+
 body
 	font-family: 'Montserrat', sans-serif
 	font-weight: normal
@@ -54,16 +57,37 @@ body textarea:required:valid
 	min-height: 100vh
 	&.black-theme
 		transition: background .15s linear
-		background: #eeeeef
+		background: #a5d0cf
 		#side-bar
 			transition: background .15s linear
-			background: #eeeeef
+			background: #a5d0cf
 		.button
 			&.gray-button
 				background-color: $black-color
 		.nav-tabs .nav-item .nav-link
 			&.active
-				background-color: $black-color
+				background-color: #282828
+		.nav-tabs
+			.nav-item
+				&:first-of-type
+					.nav-link
+						border-top-left-radius: 8px
+						border-bottom-left-radius: 8px
+						border-top: 1px solid $gray-black-color
+						border-left: 1px solid $gray-black-color
+						border-bottom: 1px solid $gray-black-color
+				&:last-of-type
+					.nav-link
+						border-left: 0
+						border-top-right-radius: 8px
+						border-bottom-right-radius: 8px
+						border-top: 1px solid $gray-black-color
+						border-right: 1px solid $gray-black-color
+						border-bottom: 1px solid $gray-black-color
+				&.active
+					border: 0
+
+
 		.hero-content
 			.hero-form
 				.form-block-wrapper
@@ -71,7 +95,7 @@ body textarea:required:valid
 						background-color: transparent
 						.followMeBar2
 							&.fixed
-								background-color: #eeeeef
+								background-color: #a5d0cf
 				.form-block
 					.form-check-input[type=checkbox] + label.form-check-label
 						border: 1px solid $black-color
@@ -79,11 +103,36 @@ body textarea:required:valid
 						border: 1px solid $black-color
 						&:after
 							background-color: $black-color
+				.standard-form-input
+					border: 1px solid $gray-black-color
+					color: $black-color
+					&::-webkit-input-placeholder
+						color: $black-color
+					&:-moz-placeholder
+						color: $black-color
+					&::-moz-placeholder
+						color: $black-color
+					&:-ms-input-placeholder
+						color: $black-color
+					&::placeholder
+						color: $black-color
+				.standard-form-textarea
+					border: 1px solid $gray-black-color
+					&::-webkit-input-placeholder
+						color: $black-color
+					&:-moz-placeholder
+						color: $black-color
+					&::-moz-placeholder
+						color: $black-color
+					&:-ms-input-placeholder
+						color: $black-color
+					&::placeholder
+						color: $black-color
 		.width-wrapper
 			.control-width
 				&.tasks-panel
 					transition: all .15s linear
-					background-color: #eeeeef
+					background-color: #a5d0cf
 
 
 		//.hero-content .hero-form
@@ -115,17 +164,26 @@ body textarea:required:valid
 	border-right: 1px solid rgba(47, 53, 66, 0.2)
 	background-color: $white-color
 	transition: background .15s linear
+	&.with-indent
+		.hero-title
+			margin-bottom: 55px
+		.bottom-block
+			.button
+				margin-bottom: 80px
 	.hero-title
 		display: block
 		text-align: center
-		margin-bottom: 55px
+		//margin-bottom: 55px
 	.nav-menu
-		margin-top: 150px
+		display: flex
+		flex-direction: column
+		//align-self: center
+		//margin-top: 150px
 		li
 			a
 				padding: 8px 0
 			&:last-of-type
-				margin-bottom: 25px
+				margin-bottom: 0px
 		.icon
 			display: block
 			text-align: center
@@ -145,6 +203,8 @@ body textarea:required:valid
 	display: flex
 	flex-direction: row
 	border-radius: 8px
+	margin: 0
+	border: none
 	.nav-item
 		width: 50%
 		margin-bottom: 0
@@ -152,20 +212,26 @@ body textarea:required:valid
 			.nav-link
 				border-top-left-radius: 8px
 				border-bottom-left-radius: 8px
+				border-top: 1px solid rgba(47, 53, 66, 0.2)
+				border-left: 1px solid rgba(47, 53, 66, 0.2)
+				border-bottom: 1px solid rgba(47, 53, 66, 0.2)
 		&:last-of-type
 			.nav-link
 				border-left: 0
 				border-top-right-radius: 8px
 				border-bottom-right-radius: 8px
-				&.active
-					border-left: 0
+				border-top: 1px solid rgba(47, 53, 66, 0.2)
+				border-right: 1px solid rgba(47, 53, 66, 0.2)
+				border-bottom: 1px solid rgba(47, 53, 66, 0.2)
+		&.active
+			border: 0
 		.nav-link
 			border-radius: 0
-			border: 1px solid rgba(47, 53, 66, 0.2)
+			background-color: #ffffff
 			height: 46px
 			padding: 0
 			&.active
-				background-color: $gray-black-color
+				background-color: #282828
 				color: $white-color
 
 
@@ -186,7 +252,7 @@ body textarea:required:valid
 				margin-top: 25px
 				a
 					font-weight: 600
-					color: $gray-black-color
+					//color: $gray-black-color
 			&.wider
 				max-width: 600px
 			&.checkboxes-wrapper
@@ -218,7 +284,6 @@ body textarea:required:valid
 				position: relative
 				display: flex
 				width: 100%
-				background-color: $white-color
 			.followMeBar,
 			.followMeBar2
 				padding: 10px 0 10px 0
@@ -251,7 +316,7 @@ body textarea:required:valid
 				>.form-block
 					margin-bottom: 20px
 			&.second-line
-				max-width: 500px
+				max-width: 570px
 				margin-top: 5px
 				margin-bottom: 10px
 				.form-block
@@ -262,7 +327,7 @@ body textarea:required:valid
 						font-size: 32px
 						line-height: 36px
 			&.third-line
-				max-width: 440px
+				max-width: 530px
 				.form-block
 					align-items: flex-start
 					margin-bottom: 10px
@@ -336,24 +401,43 @@ body textarea:required:valid
 			font-size: 18px
 			font-weight: 500
 			padding: 8px 16px
-			border: 1px solid $light-gray-color
+			border: 1px solid $gray-black-color
 			background-color: $white-color
 			border-radius: 8px
+			box-shadow: none
+			outline: none
+			-webkit-appearance: none
+			-moz-appearance: none
 			&::-webkit-input-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&:-moz-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&::-moz-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&:-ms-input-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&::placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 		.standard-form-textarea
 			font-family: 'Montserrat', sans-serif
 			display: flex
@@ -362,30 +446,117 @@ body textarea:required:valid
 			font-size: 18px
 			font-weight: 500
 			padding: 8px 16px
-			border: 1px solid $light-gray-color
+			border: 1px solid $gray-black-color
 			background-color: $white-color
 			border-radius: 8px
+			outline: none
+			-webkit-appearance: none
+			-moz-appearance: none
 			&::-webkit-input-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&:-moz-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&::-moz-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&:-ms-input-placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 			&::placeholder
 				font-size: 18px
-				color: $gray-black-color
+				color: $black-color
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
 		.standard-form-input,
 		.standard-form-textarea
 			margin-bottom: 25px
 		.button
 			margin-top: 40px
+		//standard-select
+		.standard-select-wrapper
+			position: relative
+			margin-bottom: 25px
+			.select2-container--default
+				&.select2-container--open
+					.select2-selection--single
+						.select2-selection__arrow
+							b
+								border-width: 0 6px 8px 6px
+								border-color: transparent transparent $black-color
+			.select2-container
+				//position: relative!important
+				left: 0!important
+				//top: 0!important
+				.select2-dropdown
+					border-top-left-radius: 0
+					border-top-right-radius: 0
+					border-bottom-left-radius: 8px
+					border-bottom-right-radius: 8px
+				.select2-results
+					.select2-results__options
+						display: flex
+						flex-direction: row
+						flex-wrap: wrap
+						border-bottom-left-radius: 6px
+						border-bottom-right-radius: 6px
+						.select2-results__option
+							min-width: 33.33%
+							font-size: 16px
+							font-family: 'Montserrat', sans-serif
+							font-weight: 500
+							padding: 8px 16px
+							&.select2-results__option--highlighted
+								background-color: $black-color
 
+		.custom-standard-select
+			border: 1px solid $gray-black-color
+			height: initial
+			border-radius: 8px
+			padding: 0
+			outline: none
+			&.select2-selection--multiple
+				.select2-selection__rendered
+					padding-top: 10px
+					padding-bottom: 0
+					.select2-selection__choice
+						margin-bottom: 8px
+			.select2-selection__rendered
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				font-size: 18px
+				font-family: 'Montserrat', sans-serif
+				font-weight: 500
+				color: $black-color
+				padding: 8px 16px
+				.select2-selection__choice
+					margin: 0 10px 0 0
+			.select2-search--inline
+				display: none
+			.select2-selection__arrow
+				height: 100%
+				top: 0
+				width: 40px
+				b
+					border-width: 8px 6px 0 6px
+					border-color: $black-color transparent transparent
+			.select2-selection__placeholder
+				color: $black-color
 .footer-menu
 	position: fixed
 	bottom: 0
@@ -393,7 +564,7 @@ body textarea:required:valid
 	&.black-theme
 		ul
 			transition: all .15s linear
-			background-color: #eeeeef
+			background-color: #a5d0cf
 	ul
 		display: flex
 		flex-direction: row
