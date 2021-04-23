@@ -149,6 +149,55 @@
       min-height: 100%
       .hero-content
         height: 100%
+        .hero-form
+          .standard-form-input
+            font-size: 16px
+            padding: 6px 12px
+            margin-bottom: 15px
+            &::-webkit-input-placeholder
+              font-size: 16px
+            &:-moz-placeholder
+              font-size: 16px
+            &::-moz-placeholder
+              font-size: 16px
+            &:-ms-input-placeholder
+              font-size: 16px
+            &::placeholder
+              font-size: 16px
+          .standard-form-textarea
+            font-size: 16px
+            padding: 6px 12px
+            min-height: 80px
+            margin-bottom: 15px
+            &::-webkit-input-placeholder
+              font-size: 16px
+            &:-moz-placeholder
+              font-size: 16px
+            &::-moz-placeholder
+              font-size: 16px
+            &:-ms-input-placeholder
+              font-size: 16px
+            &::placeholder
+              font-size: 16px
+          .standard-form-search
+            .ui-menu
+              border-bottom-left-radius: 6px
+              border-bottom-right-radius: 6px
+              li
+                padding: 6px 12px
+                font-size: 15px
+      .width-wrapper
+        .control-width
+          .nav-tabs
+            width: 100%
+            max-width: 250px
+            margin-top: 100px
+            margin-bottom: 30px
+            .nav-item
+              .nav-link
+                height: 38px
+                font-size: 17px
+                line-height: 19px
     &.black-theme
       .width-wrapper
         .control-width
@@ -240,7 +289,11 @@
         .first-line
           &:last-of-type
             margin-bottom: 80px
-
+  .footer-menu
+    ul
+      li
+        a
+          padding: 10px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
   .hero-content
@@ -274,9 +327,12 @@
 
   .footer-menu ul li
     a
-      padding: 10px
+      padding: 8px
       .icon
-        margin-bottom: 2px
+        margin-bottom: 0px
+      .text
+        font-size: 16px
+        line-height: 18px
 
 
 /* Custom, iPhone Retina */

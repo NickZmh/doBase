@@ -145,6 +145,7 @@ body textarea:required:valid
 				margin-bottom: 25px
 			.nav-tabs
 				margin-top: 50px
+				width: 100%
 .side-bar-wrapper
 	position: relative
 	width: 100%
@@ -557,10 +558,56 @@ body textarea:required:valid
 					border-color: $black-color transparent transparent
 			.select2-selection__placeholder
 				color: $black-color
+		.standard-form-search
+			&.open
+				input[type="search"]
+					border-bottom: none
+					border-bottom-right-radius: 0
+					border-bottom-left-radius: 0
+
+			input[type="search"]::-webkit-search-cancel-button
+				-webkit-appearance: none
+				height: 1em
+				width: 1em
+				border-radius: 50em
+				background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%
+				background-size: contain
+				opacity: 0
+				pointer-events: none
+			input[type="search"]:focus::-webkit-search-cancel-button
+				opacity: .3
+				pointer-events: all
+
+			.ui-menu
+				width: 100%!important
+				background-color: $white-color
+				border: 1px solid $gray-black-color
+				border-bottom-left-radius: 8px
+				border-bottom-right-radius: 8px
+				li
+					padding: 8px 16px
+					font-family: 'Montserrat', sans-serif
+					font-size: 16px
+					font-weight: 500
+					transition: all .2s linear
+					&:last-of-type
+						border-bottom-left-radius: 6px
+						border-bottom-right-radius: 6px
+					&:hover
+						background-color: $gray-black-color
+						color: $white-color
+						transition: all .2s linear
+						cursor: pointer
 .footer-menu
 	position: fixed
 	bottom: 0
 	width: 100%
+	&.top-block
+		top: 0
+		bottom: initial
+		ul
+			border-top: none
+			border-bottom: 1px solid rgba(47, 53, 66, 0.2)
 	&.black-theme
 		ul
 			transition: all .15s linear

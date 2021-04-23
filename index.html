@@ -39,7 +39,7 @@
 
 </head>
 
-<body class="h-100">
+<body class="h-100 hide-scroll" id="hide-scroll">
 	<div id="main-container" class="top-stick">
 		<div class="side-bar-wrapper">
 			<div id="side-bar" class="side-bar-block">
@@ -60,7 +60,7 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="width-wrapper">
-						<div class="control-width">
+						<div class="control-width d-flex flex-column align-items-center">
 							<ul class="nav nav-tabs" id="hero-content-tabs" role="tablist">
 								<li class="nav-item" role="presentation">
 									<a class="nav-link standard-description button fw-500 high active" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="work" aria-selected="true">Work</a>
@@ -77,35 +77,11 @@
 						<div class="tab-pane fade show active" id="work" role="tabpanel" aria-labelledby="work-tab">
 							<div class="width-wrapper">
 								<form action="" class="hero-form control-width">
-									<div class="standard-select-wrapper" id="basic-multiple-wrp1">
-										<select class="basic-multiple standard-select">
-											<option value=""></option>
-											<option>Samsung</option>
-											<option>Philips</option>
-											<option>Apple</option>
-											<option>Sony</option>
-											<option>Microsoft</option>
-											<option>Panasonic</option>
-											<option>IBM</option>
-											<option>Foxconn</option>
-											<option>Hewlett Packard</option>
-											<option>Dell</option>
-										</select>
+									<div class="standard-form-search" id="search-wrp">
+										<input type="search" id="search1" class="standard-form-input" placeholder="Project">
 									</div>
-									<div class="standard-select-wrapper" id="basic-multiple-wrp2">
-										<select class="basic-multiple-2 standard-select">
-											<option value=""></option>
-											<option>Samsung</option>
-											<option>Philips</option>
-											<option>Apple</option>
-											<option>Sony</option>
-											<option>Microsoft</option>
-											<option>Panasonic</option>
-											<option>IBM</option>
-											<option>Foxconn</option>
-											<option>Hewlett Packard</option>
-											<option>Dell</option>
-										</select>
+									<div class="standard-form-search" id="search-wrp2">
+										<input type="search" id="search2" class="standard-form-input" placeholder="Goal">
 									</div>
 									<textarea class="standard-form-textarea" placeholder="Task"></textarea>
 									<input type="text" class="standard-form-input mb-0" placeholder="Who (Default to me)">
@@ -118,35 +94,11 @@
 						<div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="personal-tab">
 							<div class="width-wrapper">
 								<form action="" class="hero-form control-width">
-									<div class="standard-select-wrapper" id="basic-multiple-wrp3">
-										<select class="basic-multiple-3 standard-select">
-											<option value=""></option>
-											<option>Samsung</option>
-											<option>Philips</option>
-											<option>Apple</option>
-											<option>Sony</option>
-											<option>Microsoft</option>
-											<option>Panasonic</option>
-											<option>IBM</option>
-											<option>Foxconn</option>
-											<option>Hewlett Packard</option>
-											<option>Dell</option>
-										</select>
+									<div class="standard-form-search" id="search-wrp3">
+										<input type="search" id="search3" class="standard-form-input" placeholder="Project">
 									</div>
-									<div class="standard-select-wrapper" id="basic-multiple-wrp4">
-										<select class="basic-multiple-4 standard-select">
-											<option value=""></option>
-											<option>Samsung</option>
-											<option>Philips</option>
-											<option>Apple</option>
-											<option>Sony</option>
-											<option>Microsoft</option>
-											<option>Panasonic</option>
-											<option>IBM</option>
-											<option>Foxconn</option>
-											<option>Hewlett Packard</option>
-											<option>Dell</option>
-										</select>
+									<div class="standard-form-search" id="search-wrp4">
+										<input type="search" id="search4" class="standard-form-input" placeholder="Goal">
 									</div>
 									<textarea class="standard-form-textarea" placeholder="Task"></textarea>
 									<input type="text" class="standard-form-input mb-0" placeholder="Who (Default to me)">
@@ -162,11 +114,9 @@
 		</div>
 	</div>
 
-	<div class="footer-menu">
+	<div class="footer-menu top-block">
 		<ul>
-			<li><a href="#">
-				<span class="icon"><i class="fas fa-plus" aria-hidden="true"></i></span>
-				<span class="text">Add</span></a></li>
+
 			<li><a href="#">
 				<span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
 				<span class="text">Me</span>
@@ -183,6 +133,9 @@
 				</span>
 				<span class="text">Date</span>
 			</a></li>
+			<li><a href="#">
+				<span class="icon"><i class="fas fa-plus" aria-hidden="true"></i></span>
+				<span class="text">Add</span></a></li>
 		</ul>
 	</div>
 
@@ -199,6 +152,7 @@
 	<![endif]-->
 	
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
 	<script src="libs/bootstrap4/js/bootstrap.min.js"></script>
@@ -210,6 +164,76 @@
 	<script>
 		$(document).ready(function() {
 
+
+			var availableTags = [
+				"ActionScript",
+				"AppleScript",
+				"Asp",
+				"BASIC",
+				"C",
+				"C++",
+				"Clojure",
+				"COBOL",
+				"ColdFusion",
+				"Erlang",
+				"Fortran",
+				"Groovy",
+				"Haskell",
+				"Java",
+				"JavaScript",
+				"Lisp",
+				"Perl",
+				"PHP",
+				"Python",
+				"Ruby",
+				"Scala",
+				"Scheme"
+			];
+			$("input#search1").autocomplete({
+				source: availableTags,
+				appendTo: "#search-wrp",
+				open: function( event, ui ) {
+					$('#search-wrp').addClass('open');
+				},
+				close: function( event, ui ) {
+					$('#search-wrp').removeClass('open');
+				}
+			});
+			$("input#search2").autocomplete({
+				source: availableTags,
+				appendTo: "#search-wrp2",
+				open: function( event, ui ) {
+					$('#search-wrp2').addClass('open');
+				},
+				close: function( event, ui ) {
+					$('#search-wrp2').removeClass('open');
+				}
+			});
+			$("input#search3").autocomplete({
+				source: availableTags,
+				appendTo: "#search-wrp3",
+				open: function( event, ui ) {
+					$('#search-wrp3').addClass('open');
+				},
+				close: function( event, ui ) {
+					$('#search-wrp3').removeClass('open');
+				}
+			});
+			$("input#search4").autocomplete({
+				source: availableTags,
+				appendTo: "#search-wrp4",
+				open: function( event, ui ) {
+					$('#search-wrp4').addClass('open');
+				},
+				close: function( event, ui ) {
+					$('#search-wrp4').removeClass('open');
+				}
+			});
+
+
+			var parent = document.getElementById('hide-scroll');
+			var child = document.getElementById('main-container');
+			child.style.paddingRight = child.offsetWidth - child.clientWidth + "px";
 
 
 			$('.basic-multiple').select2({
