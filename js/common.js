@@ -123,7 +123,7 @@ $('a[data-toggle="tab"]').on('hidden.bs.tab', function (e) {
 	else if($(e.target).is('#work-tab')) {
 		console.log('hello personal');
 		// $(window).scrollTop(-1);
-		
+
 		$('.followMeBar').each(function () {
 			$(this).removeClass("fixed");
 			// $(this).data('originalPosition', $(this).offset().top)
