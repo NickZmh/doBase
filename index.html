@@ -114,7 +114,7 @@
 		</div>
 	</div>
 
-	<div class="footer-menu top-block">
+	<div class="footer-menu">
 		<ul>
 
 			<li><a href="#">
@@ -133,8 +133,9 @@
 				</span>
 				<span class="text">Date</span>
 			</a></li>
-			<li><a href="#">
-				<span class="icon"><i class="fas fa-plus" aria-hidden="true"></i></span>
+			<li><a href="#" class="add added-active">
+				<span class="icon hide"><i class="fas fa-plus" aria-hidden="true"></i></span>
+				<span class="icon show"><i class="fas fa-check"></i></span>
 				<span class="text">Add</span></a></li>
 		</ul>
 	</div>
@@ -164,6 +165,11 @@
 	<script>
 		$(document).ready(function() {
 
+
+			$('.add').click(function (e) {
+				e.preventDefault();
+				$(this).toggleClass('added-active');
+			})
 
 			var availableTags = [
 				"ActionScript",

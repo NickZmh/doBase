@@ -250,7 +250,7 @@ body textarea:required:valid
 			.signUp
 				display: flex
 				flex-direction: row
-				justify-content: flex-start
+				justify-content: center
 				margin-top: 25px
 				a
 					font-weight: 600
@@ -632,6 +632,21 @@ body textarea:required:valid
 				align-items: center
 				justify-content: center
 				padding: 15px
+				height: 100%
+				.icon
+					&.show
+						display: none
+				&.added-active
+					background-color: #1e7e34
+					.icon
+						&.hide
+							display: none
+						&.show
+							display: block
+						i
+							color: #ffffff
+					.text
+						color: #ffffff
 				.icon
 					font-size: 18px
 					margin-bottom: 5px
